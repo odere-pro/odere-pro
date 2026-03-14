@@ -1,10 +1,7 @@
 - 👋 Hi, I’m @odere-pro
-- 👀 I’m interested in AI and Web development
-- 🌱 I’m currently learning Vertex platform
-- 💞️ I’m looking to collaborate on AI start ups and fun project and way how can I automate/simplify my life with technology
+- 👀 I’m interested in AI and Cloud infrastructure
 - 📫 How to reach me www.linkedin.com/in/oleksander-derechei
 - 😄 Pronouns: Oleksandr Derechei
-- ⚡ Fun fact: I like to play board games
 
 <!---
 odere-pro/odere-pro is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
