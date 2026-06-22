@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://odere-pro.github.io/sitemap.xml
