@@ -1,0 +1,37 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a1816"/>
+      <stop offset="1" stop-color="#221f1c"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2bbd96"/>
+      <stop offset="1" stop-color="#5a9fd4"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="0%" r="70%">
+      <stop offset="0" stop-color="#2bbd96" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#2bbd96" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- eyebrow pill -->
+  <rect x="80" y="120" width="486" height="48" rx="24" fill="none" stroke="#322e29" stroke-width="1.5"/>
+  <text x="105" y="152" font-family="Helvetica, Arial, sans-serif" font-size="22" letter-spacing="3" fill="#2bbd96">FORWARD DEPLOYED AI ENGINEER · FOUNDER</text>
+
+  <!-- name -->
+  <text x="78" y="280" font-family="Helvetica, Arial, sans-serif" font-size="84" font-weight="800" fill="#ece7dd">Oleksandr Derechei</text>
+
+  <!-- tagline -->
+  <text x="80" y="360" font-family="Helvetica, Arial, sans-serif" font-size="46" font-weight="700" fill="url(#accent)">I build AI agents for the Software 3.0 era</text>
+
+  <!-- sub -->
+  <text x="80" y="430" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#9a9183">Claude Code plugins · Multi-agent orchestration · Cloud &amp; AWS</text>
+
+  <!-- bottom bar -->
+  <rect x="80" y="520" width="1040" height="2" fill="#322e29"/>
+  <text x="80" y="565" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#ece7dd" font-weight="600">github.com/odere-pro</text>
+  <text x="1120" y="565" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#9a9183">odere-pro.github.io</text>
+</svg>

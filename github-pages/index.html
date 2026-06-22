@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- ============ PRIMARY SEO ============ -->
+  <title>Oleksandr Derechei — Forward Deployed AI Engineer &amp; Founder</title>
+  <meta name="description" content="Oleksandr Derechei (odere-pro) is a forward deployed AI engineer and founder who takes AI agents from prototype to production — building Claude Code plugins, multi-agent systems, and cloud infrastructure for the Software 3.0 era." />
+  <meta name="keywords" content="Oleksandr Derechei, odere-pro, forward deployed AI engineer, forward deployed engineer, AI engineer, agentic engineer, founder, Claude Code plugins, AI agents, multi-agent orchestration, Model Context Protocol, MCP, LLM tooling, Software 3.0, AWS architect, cloud infrastructure" />
+  <meta name="author" content="Oleksandr Derechei" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://odere-pro.github.io/" />
+  <meta name="theme-color" content="#faf8f4" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1a1816" media="(prefers-color-scheme: dark)" />
+
+  <!-- ============ OPEN GRAPH ============ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Oleksandr Derechei" />
+  <meta property="og:title" content="Oleksandr Derechei — Forward Deployed AI Engineer &amp; Founder" />
+  <meta property="og:description" content="Taking AI agents from prototype to production — Claude Code plugins, multi-agent systems, and cloud infrastructure for the Software 3.0 era." />
+  <meta property="og:url" content="https://odere-pro.github.io/" />
+  <meta property="og:image" content="https://odere-pro.github.io/og-image.png" />
+  <meta property="og:image:alt" content="Oleksandr Derechei — Forward Deployed AI Engineer & Founder" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="sv_SE" />
+
+  <!-- ============ TWITTER / X ============ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Oleksandr Derechei — Forward Deployed AI Engineer &amp; Founder" />
+  <meta name="twitter:description" content="Taking AI agents from prototype to production — Claude Code plugins, multi-agent systems, and cloud infrastructure for the Software 3.0 era." />
+  <meta name="twitter:image" content="https://odere-pro.github.io/og-image.png" />
+
+  <!-- ============ STRUCTURED DATA (JSON-LD) ============ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Oleksandr Derechei",
+    "alternateName": "odere-pro",
+    "url": "https://odere-pro.github.io/",
+    "jobTitle": "Forward Deployed AI Engineer & Founder",
+    "description": "Forward deployed AI engineer and founder taking AI agents from prototype to production — Claude Code plugins, multi-agent orchestration, and cloud infrastructure for the Software 3.0 era.",
+    "knowsAbout": ["AI Agents", "Agentic Engineering", "Claude Code Plugins", "Model Context Protocol", "Multi-Agent Orchestration", "AWS Cloud Architecture", "LLM Tooling", "TypeScript", "Software 3.0"],
+    "sameAs": [
+      "https://github.com/odere-pro",
+      "https://www.linkedin.com/in/oleksander-derechei",
+      "https://medium.com/@odere.pub",
+      "https://www.npmjs.com/package/@odere-pro/agentline"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Oleksandr Derechei — Portfolio",
+    "url": "https://odere-pro.github.io/",
+    "author": { "@type": "Person", "name": "Oleksandr Derechei" }
+  }
+  </script>
+
+  <!-- Set theme + language before first paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+        var l = localStorage.getItem('lang');
+        if (l !== 'en' && l !== 'sv') {
+          l = (navigator.language || 'en').toLowerCase().indexOf('sv') === 0 ? 'sv' : 'en';
+        }
+        document.documentElement.setAttribute('lang', l);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+
+  <style>
+    /* ============ DESIGN TOKENS ============ */
+    :root, :root[data-theme="light"] {
+      --bg:#faf8f4; --bg2:#f1ebe1; --card:#fefcf8; --border:#e6dfd4;
+      --fg:#2b2722; --muted:#6b6053; --heading:#211d18;
+      --accent:#007c5d; --accent2:#1666aa; --link:#00674c; --on-accent:#ffffff;
+      --gradient:linear-gradient(100deg,#008968,#1666aa);
+      --accent-soft:rgba(0,137,104,.10);
+      --code-bg:#efeae1;
+      --shadow-sm:0 1px 2px rgba(33,29,24,.05);
+      --shadow-md:0 4px 24px rgba(33,29,24,.07);
+    }
+    :root[data-theme="dark"] {
+      --bg:#1a1816; --bg2:#211e1b; --card:#221f1c; --border:#322e29;
+      --fg:#ddd7cd; --muted:#9a9183; --heading:#ece7dd;
+      /* calmer, less-neon accents so dark mode doesn't read as "bright" */
+      --accent:#2bbd96; --accent2:#5a9fd4; --link:#2bbd96; --on-accent:#11201b;
+      --gradient:linear-gradient(100deg,#2bbd96,#5a9fd4);
+      --accent-soft:rgba(43,189,150,.10);
+      --code-bg:#262320;
+      --shadow-sm:0 1px 2px rgba(0,0,0,.35);
+      --shadow-md:0 6px 30px rgba(0,0,0,.4);
+    }
+
+    :root{ --radius:14px; --radius-sm:8px; --maxw:1040px; }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      background:var(--bg);color:var(--fg);font-size:17px;line-height:1.7;
+      -webkit-font-smoothing:antialiased;transition:background .3s ease,color .3s ease;
+    }
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+    /* gradient text helper — the "highlight accent" from the guide */
+    .grad{
+      background:var(--gradient);-webkit-background-clip:text;background-clip:text;
+      -webkit-text-fill-color:transparent;color:transparent;
+    }
+
+    /* focus + a11y */
+    a:focus-visible,button:focus-visible{
+      outline:2px solid var(--accent);outline-offset:3px;border-radius:6px;
+    }
+    .skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:var(--on-accent);
+      padding:10px 16px;border-radius:0 0 8px 0;z-index:100;font-weight:600}
+    .skip:focus{left:0}
+
+    /* nav */
+    header.nav{position:sticky;top:0;z-index:50;
+      -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+      background:var(--bg); /* fallback when color-mix is unsupported */
+      background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:62px;gap:16px}
+    .logo{font-weight:800;font-size:1.05rem;color:var(--heading);letter-spacing:-.01em}
+    .nav-right{display:flex;align-items:center;gap:8px}
+    .nav-links{display:flex;align-items:center}
+    .nav-links a{color:var(--muted);margin-left:22px;font-size:.95rem;font-weight:500}
+    .nav-links a:hover{color:var(--fg);text-decoration:none}
+    @media(max-width:680px){.nav-links{display:none}}
+
+    /* control buttons (theme + language) */
+    .ctrl{
+      display:inline-flex;align-items:center;justify-content:center;gap:6px;
+      height:38px;min-width:38px;padding:0 10px;cursor:pointer;
+      background:var(--card);color:var(--fg);border:1px solid var(--border);
+      border-radius:var(--radius-sm);font:inherit;font-size:.85rem;font-weight:600;
+      transition:border-color .18s,color .18s,background .18s;
+    }
+    .ctrl:hover{border-color:var(--accent);color:var(--accent)}
+    .ctrl svg{width:18px;height:18px;display:block}
+    :root[data-theme="light"] .i-sun{display:none}
+    :root[data-theme="dark"] .i-moon{display:none}
+
+    /* hero */
+    .hero{padding:88px 0 56px;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;z-index:-1;
+      background:radial-gradient(620px 320px at 50% -12%,var(--accent-soft),transparent 70%)}
+    .eyebrow{display:inline-block;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;
+      font-weight:600;color:var(--accent);background:var(--accent-soft);
+      border:1px solid var(--border);
+      border-color:color-mix(in srgb,var(--accent) 28%,transparent);
+      border-radius:999px;padding:6px 16px;margin-bottom:24px}
+    .hero h1{font-size:clamp(2.2rem,6vw,3.7rem);line-height:1.08;font-weight:800;
+      letter-spacing:-.025em;color:var(--heading)}
+    .hero p.lead{max-width:660px;margin:22px auto 0;color:var(--muted);font-size:1.13rem}
+    .cta{margin-top:34px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-block;padding:12px 24px;border-radius:10px;font-weight:600;
+      font-size:.96rem;border:1px solid var(--border);transition:.18s;cursor:pointer}
+    .btn-primary{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+    .btn-primary:hover{filter:brightness(1.08);text-decoration:none}
+    .btn-ghost{color:var(--fg);background:transparent}
+    .btn-ghost:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+
+    /* sections */
+    section{padding:56px 0}
+    .section-title{font-size:1.65rem;font-weight:800;margin-bottom:10px;letter-spacing:-.015em;
+      color:var(--heading);position:relative;display:inline-block}
+    .section-title::after{content:"";position:absolute;left:0;bottom:-8px;height:3px;width:44px;
+      border-radius:3px;background:var(--gradient)}
+    .section-sub{color:var(--muted);margin:18px 0 30px}
+
+    /* stats */
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    @media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+    .stat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+      padding:22px;text-align:center;box-shadow:var(--shadow-sm)}
+    .stat .n{font-size:2rem;font-weight:800;line-height:1;
+      background:var(--gradient);-webkit-background-clip:text;background-clip:text;
+      -webkit-text-fill-color:transparent;color:transparent}
+    .stat .l{color:var(--muted);font-size:.85rem;margin-top:8px}
+
+    /* project cards */
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    @media(max-width:760px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+      padding:24px;transition:border-color .18s,transform .18s,box-shadow .18s;
+      display:flex;flex-direction:column;box-shadow:var(--shadow-sm)}
+    .card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--shadow-md)}
+    .card h3{font-size:1.18rem;margin-bottom:8px}
+    .card h3 a{color:var(--heading);font-weight:700}
+    .card h3 a:hover{color:var(--accent);text-decoration:none}
+    .card p{color:var(--muted);font-size:.97rem;flex:1}
+    .tags{margin-top:16px;display:flex;gap:7px;flex-wrap:wrap}
+    .tag{font-size:.74rem;color:var(--muted);background:var(--code-bg);
+      border:1px solid var(--border);border-radius:999px;padding:3px 11px;
+      font-family:"SF Mono",SFMono-Regular,ui-monospace,Menlo,Consolas,monospace}
+    .card .links{margin-top:16px;font-size:.9rem;display:flex;gap:16px;font-weight:600}
+
+    /* about */
+    .band{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .about p{color:var(--muted);max-width:760px;font-size:1.05rem}
+    .about p+p{margin-top:14px}
+    .about strong{color:var(--fg)}
+    .pills{margin-top:24px;display:flex;gap:9px;flex-wrap:wrap}
+    .pill{font-size:.85rem;color:var(--fg);background:var(--card);border:1px solid var(--border);
+      border-radius:8px;padding:6px 13px}
+
+    /* contact */
+    .contact{text-align:center}
+    .contact .section-title{display:inline-block}
+    .contact .section-title::after{left:50%;transform:translateX(-50%)}
+    .contact .cta{margin-top:28px}
+
+    footer{border-top:1px solid var(--border);padding:30px 0;text-align:center;
+      color:var(--muted);font-size:.88rem}
+
+    @media(prefers-reduced-motion:reduce){
+      *{transition:none!important;scroll-behavior:auto!important;animation:none!important}
+      .card:hover{transform:none}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#projects" data-i18n="skip">Skip to content</a>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <span class="logo">odere<span class="grad">-pro</span></span>
+      <div class="nav-right">
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#projects" data-i18n="nav.projects">Projects</a>
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+          <a href="https://github.com/odere-pro" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+        <button id="langBtn" class="ctrl" type="button" aria-label="Switch language">SV</button>
+        <button id="themeBtn" class="ctrl" type="button" aria-label="Switch to dark mode">
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow" data-i18n="hero.eyebrow">Forward Deployed AI Engineer · Founder</span>
+        <h1 data-i18n-html="hero.title">I build <span class="grad">AI agents</span><br/>for the Software&nbsp;3.0 era</h1>
+        <p class="lead" data-i18n="hero.lead">
+          I'm Oleksandr Derechei — I take AI agents from prototype to production, and build
+          the Claude Code plugins, multi-agent systems, and cloud architecture that get
+          them there.
+        </p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#projects" data-i18n="cta.work">View my work</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/oleksander-derechei" target="_blank" rel="noopener" data-i18n="cta.linkedin">Connect on LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section style="padding-top:0" aria-label="At a glance">
+      <div class="wrap">
+        <div class="stats">
+          <div class="stat"><div class="n">4+</div><div class="l" data-i18n="stat.tools">Open-source agent tools</div></div>
+          <div class="stat"><div class="n">38</div><div class="l" data-i18n="stat.widgets">Statusline widgets shipped</div></div>
+          <div class="stat"><div class="n">6</div><div class="l" data-i18n="stat.mcp">MCP servers integrated</div></div>
+          <div class="stat"><div class="n">1.8k+</div><div class="l" data-i18n="stat.contrib">Contributions / year</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="wrap">
+        <h2 class="section-title" data-i18n="proj.title">Featured projects</h2>
+        <p class="section-sub" data-i18n="proj.sub">Agent-native tooling for the Software 3.0 stack.</p>
+        <div class="grid">
+
+          <article class="card">
+            <h3><a href="https://github.com/odere-pro/claude-aws-architect" target="_blank" rel="noopener">claude-aws-architect</a></h3>
+            <p data-i18n="proj.aws">A Claude Code plugin for AWS Well-Architected SDLC. Designs systems on AWS — requirements, architecture, IaC, cost, security, observability — with 5 agents, 6 MCP servers, 15 skills, and 34 validation gates, grounding every claim against AWS docs.</p>
+            <div class="tags"><span class="tag">Shell</span><span class="tag">AWS CDK</span><span class="tag">MCP</span><span class="tag">D2</span></div>
+            <div class="links"><a href="https://github.com/odere-pro/claude-aws-architect" target="_blank" rel="noopener" data-i18n="link.repo">Repository →</a></div>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://github.com/odere-pro/claude-agentline" target="_blank" rel="noopener">claude-agentline</a></h3>
+            <p data-i18n="proj.agentline">A fast, themeable powerline statusline for Claude Code — git, tokens, context window, rate limits, 38 widgets across 6 families, and a live TUI editor. Zero network on the hot path. Published on npm.</p>
+            <div class="tags"><span class="tag">TypeScript</span><span class="tag">Node</span><span class="tag">CLI</span><span class="tag">npm</span></div>
+            <div class="links"><a href="https://github.com/odere-pro/claude-agentline" target="_blank" rel="noopener" data-i18n="link.repo">Repository →</a><a href="https://www.npmjs.com/package/@odere-pro/agentline" target="_blank" rel="noopener">npm →</a></div>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://github.com/odere-pro/claude-calibration" target="_blank" rel="noopener">claude-calibration</a></h3>
+            <p data-i18n="proj.calibration">A Claude Code plugin that calibrates your setup with an evaluate → plan → calibrate → re-evaluate loop, then scaffolds enforcement — a hook, rule, or wrapper skill — so the same issue can't recur.</p>
+            <div class="tags"><span class="tag">Shell</span><span class="tag">Multi-agent</span><span class="tag">Evaluation</span></div>
+            <div class="links"><a href="https://github.com/odere-pro/claude-calibration" target="_blank" rel="noopener" data-i18n="link.repo">Repository →</a><a href="https://odere-pro.github.io/claude-calibration/" target="_blank" rel="noopener" data-i18n="link.site">Site →</a></div>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://github.com/odere-pro/claude-wiki-pages-plugin" target="_blank" rel="noopener">claude-wiki-pages-plugin</a></h3>
+            <p data-i18n="proj.wiki">Karpathy's LLM Wiki for Obsidian, shipped as a four-layer, hook-enforced agent stack with multi-agent orchestration — turning a reading list into an operable, agent-driven knowledge base.</p>
+            <div class="tags"><span class="tag">TypeScript</span><span class="tag">Agents</span><span class="tag">Obsidian</span></div>
+            <div class="links"><a href="https://github.com/odere-pro/claude-wiki-pages-plugin" target="_blank" rel="noopener" data-i18n="link.repo">Repository →</a></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about band">
+      <div class="wrap">
+        <h2 class="section-title" data-i18n="about.title">About</h2>
+        <p class="section-sub" data-i18n="about.sub">From prototype to production.</p>
+        <p data-i18n-html="about.p1">
+          I'm a <strong>forward deployed AI engineer</strong> — I embed with the problem,
+          take agents from prototype to production, and build the plugins, multi-agent
+          systems, and cloud infrastructure that keep them reliable at scale. The primary
+          user is increasingly an LLM, so I design for it: stable contracts,
+          prose-for-agents docs, and deterministic gates that hold whether a human or an
+          agent is driving.
+        </p>
+        <p data-i18n-html="about.p2">
+          I ship in the open. The <strong>odere-pro</strong> stack spans a published npm
+          CLI and a Claude Code plugin marketplace — claude-aws-architect alone runs
+          5 agents, 6 MCP servers, and 34 validation gates, grounding every claim against
+          AWS docs. As a founder, I turn agent-native tooling into products teams depend
+          on — moving fast without trading away reliability.
+        </p>
+        <div class="pills">
+          <span class="pill" data-i18n="pill.agents">AI Agents</span>
+          <span class="pill" data-i18n="pill.plugins">Claude Code Plugins</span>
+          <span class="pill">Model Context Protocol</span>
+          <span class="pill" data-i18n="pill.orchestration">Multi-Agent Orchestration</span>
+          <span class="pill">AWS · Well-Architected</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill">Node.js</span>
+          <span class="pill">Software 3.0</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <h2 class="section-title" data-i18n="contact.title">Let's build something</h2>
+        <p class="section-sub" data-i18n="contact.sub">Open to forward-deployed AI engineering, founding-team, and technical-cofounder conversations.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/oleksander-derechei" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://github.com/odere-pro" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-ghost" href="https://medium.com/@odere.pub" target="_blank" rel="noopener">Medium</a>
+          <a class="btn btn-ghost" href="https://www.npmjs.com/package/@odere-pro/agentline" target="_blank" rel="noopener">npm</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © <span id="yr"></span> Oleksandr Derechei (odere-pro) · <span data-i18n="footer.tag">Built for the Software 3.0 era.</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var I18N = {
+        en: {
+          __meta: {
+            title: "Oleksandr Derechei — Forward Deployed AI Engineer & Founder",
+            desc: "Oleksandr Derechei (odere-pro) is a forward deployed AI engineer and founder who takes AI agents from prototype to production — building Claude Code plugins, multi-agent systems, and cloud infrastructure for the Software 3.0 era."
+          },
+          "skip": "Skip to content",
+          "nav.projects": "Projects",
+          "nav.about": "About",
+          "nav.contact": "Contact",
+          "hero.eyebrow": "Forward Deployed AI Engineer · Founder",
+          "hero.title": 'I build <span class="grad">AI agents</span><br/>for the Software&nbsp;3.0 era',
+          "hero.lead": "I'm Oleksandr Derechei — I take AI agents from prototype to production, and build the Claude Code plugins, multi-agent systems, and cloud architecture that get them there.",
+          "cta.work": "View my work",
+          "cta.linkedin": "Connect on LinkedIn",
+          "stat.tools": "Open-source agent tools",
+          "stat.widgets": "Statusline widgets shipped",
+          "stat.mcp": "MCP servers integrated",
+          "stat.contrib": "Contributions / year",
+          "proj.title": "Featured projects",
+          "proj.sub": "Agent-native tooling for the Software 3.0 stack.",
+          "proj.aws": "A Claude Code plugin for AWS Well-Architected SDLC. Designs systems on AWS — requirements, architecture, IaC, cost, security, observability — with 5 agents, 6 MCP servers, 15 skills, and 34 validation gates, grounding every claim against AWS docs.",
+          "proj.agentline": "A fast, themeable powerline statusline for Claude Code — git, tokens, context window, rate limits, 38 widgets across 6 families, and a live TUI editor. Zero network on the hot path. Published on npm.",
+          "proj.calibration": "A Claude Code plugin that calibrates your setup with an evaluate → plan → calibrate → re-evaluate loop, then scaffolds enforcement — a hook, rule, or wrapper skill — so the same issue can't recur.",
+          "proj.wiki": "Karpathy's LLM Wiki for Obsidian, shipped as a four-layer, hook-enforced agent stack with multi-agent orchestration — turning a reading list into an operable, agent-driven knowledge base.",
+          "link.repo": "Repository →",
+          "link.site": "Site →",
+          "about.title": "About",
+          "about.sub": "From prototype to production.",
+          "about.p1": "I'm a <strong>forward deployed AI engineer</strong> — I embed with the problem, take agents from prototype to production, and build the plugins, multi-agent systems, and cloud infrastructure that keep them reliable at scale. The primary user is increasingly an LLM, so I design for it: stable contracts, prose-for-agents docs, and deterministic gates that hold whether a human or an agent is driving.",
+          "about.p2": "I ship in the open. The <strong>odere-pro</strong> stack spans a published npm CLI and a Claude Code plugin marketplace — claude-aws-architect alone runs 5 agents, 6 MCP servers, and 34 validation gates, grounding every claim against AWS docs. As a founder, I turn agent-native tooling into products teams depend on — moving fast without trading away reliability.",
+          "pill.agents": "AI Agents",
+          "pill.plugins": "Claude Code Plugins",
+          "pill.orchestration": "Multi-Agent Orchestration",
+          "contact.title": "Let's build something",
+          "contact.sub": "Open to forward-deployed AI engineering, founding-team, and technical-cofounder conversations.",
+          "footer.tag": "Built for the Software 3.0 era."
+        },
+        sv: {
+          __meta: {
+            title: "Oleksandr Derechei — Forward Deployed AI-ingenjör & Grundare",
+            desc: "Oleksandr Derechei (odere-pro) är en forward deployed AI-ingenjör och grundare som tar AI-agenter från prototyp till produktion — och bygger Claude Code-plugins, fleragentssystem och molninfrastruktur för Software 3.0-eran."
+          },
+          "skip": "Hoppa till innehåll",
+          "nav.projects": "Projekt",
+          "nav.about": "Om",
+          "nav.contact": "Kontakt",
+          "hero.eyebrow": "Forward Deployed AI-ingenjör · Grundare",
+          "hero.title": 'Jag bygger <span class="grad">AI-agenter</span><br/>för Software&nbsp;3.0-eran',
+          "hero.lead": "Jag är Oleksandr Derechei — jag tar AI-agenter från prototyp till produktion och bygger de Claude Code-plugins, fleragentssystem och molnarkitektur som får dem dit.",
+          "cta.work": "Se mitt arbete",
+          "cta.linkedin": "Kontakta på LinkedIn",
+          "stat.tools": "Agentverktyg med öppen källkod",
+          "stat.widgets": "Statusradswidgetar levererade",
+          "stat.mcp": "MCP-servrar integrerade",
+          "stat.contrib": "Bidrag / år",
+          "proj.title": "Utvalda projekt",
+          "proj.sub": "Agentnativa verktyg för Software 3.0-stacken.",
+          "proj.aws": "En Claude Code-plugin för AWS Well-Architected SDLC. Designar system på AWS — krav, arkitektur, IaC, kostnad, säkerhet, observerbarhet — med 5 agenter, 6 MCP-servrar, 15 skills och 34 valideringsgrindar, och förankrar varje påstående mot AWS-dokumentation.",
+          "proj.agentline": "En snabb, temabar powerline-statusrad för Claude Code — git, tokens, kontextfönster, hastighetsgränser, 38 widgetar i 6 familjer och en live-TUI-editor. Noll nätverk i den heta vägen. Publicerad på npm.",
+          "proj.calibration": "En Claude Code-plugin som kalibrerar din uppsättning med en loop: utvärdera → planera → kalibrera → omvärdera, och bygger sedan upp efterlevnad — en hook, regel eller wrapper-skill — så att samma problem inte kan återkomma.",
+          "proj.wiki": "Karpathys LLM-wiki för Obsidian, levererad som en fyrlagers, hook-förstärkt agentstack med fleragentsorkestrering — förvandlar en läslista till en operabel, agentdriven kunskapsbas.",
+          "link.repo": "Repositorium →",
+          "link.site": "Webbplats →",
+          "about.title": "Om",
+          "about.sub": "Från prototyp till produktion.",
+          "about.p1": "Jag är en <strong>forward deployed AI-ingenjör</strong> — jag går in i problemet, tar agenter från prototyp till produktion och bygger de plugins, fleragentssystem och molninfrastruktur som håller dem tillförlitliga i skala. Den primära användaren är allt oftare en LLM, så jag designar för den: stabila kontrakt, dokumentation skriven för agenter och deterministiska grindar som håller oavsett om en människa eller en agent styr.",
+          "about.p2": "Jag bygger i det öppna. <strong>odere-pro</strong>-stacken sträcker sig från ett publicerat npm-CLI till en Claude Code-pluginmarknad — claude-aws-architect ensam kör 5 agenter, 6 MCP-servrar och 34 valideringsgrindar och förankrar varje påstående mot AWS-dokumentation. Som grundare förvandlar jag agentnativa verktyg till produkter som team litar på — snabbt, utan att tumma på tillförlitligheten.",
+          "pill.agents": "AI-agenter",
+          "pill.plugins": "Claude Code-plugins",
+          "pill.orchestration": "Fleragentsorkestrering",
+          "contact.title": "Låt oss bygga något",
+          "contact.sub": "Öppen för roller som forward deployed AI-ingenjör, founding engineer och teknisk medgrundare.",
+          "footer.tag": "Byggd för Software 3.0-eran."
+        }
+      };
+
+      var root = document.documentElement;
+      var langBtn = document.getElementById('langBtn');
+      var themeBtn = document.getElementById('themeBtn');
+
+      function applyLang(l) {
+        var dict = I18N[l] || I18N.en;
+        root.setAttribute('lang', l);
+        document.querySelectorAll('[data-i18n]').forEach(function (el) {
+          var k = el.getAttribute('data-i18n');
+          if (dict[k] != null) el.textContent = dict[k];
+        });
+        document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+          var k = el.getAttribute('data-i18n-html');
+          if (dict[k] != null) el.innerHTML = dict[k];
+        });
+        if (dict.__meta) {
+          if (dict.__meta.title) document.title = dict.__meta.title;
+          var m = document.querySelector('meta[name="description"]');
+          if (m && dict.__meta.desc) m.setAttribute('content', dict.__meta.desc);
+        }
+        langBtn.textContent = (l === 'en') ? 'SV' : 'EN';
+        langBtn.setAttribute('aria-label', (l === 'en') ? 'Byt till svenska' : 'Switch to English');
+      }
+
+      function applyTheme(t) {
+        root.setAttribute('data-theme', t);
+        themeBtn.setAttribute('aria-label', (t === 'dark') ? 'Switch to light mode' : 'Switch to dark mode');
+      }
+
+      langBtn.addEventListener('click', function () {
+        var cur = (root.getAttribute('lang') === 'sv') ? 'sv' : 'en';
+        var next = (cur === 'sv') ? 'en' : 'sv';
+        try { localStorage.setItem('lang', next); } catch (e) {}
+        applyLang(next);
+      });
+
+      themeBtn.addEventListener('click', function () {
+        var cur = (root.getAttribute('data-theme') === 'dark') ? 'dark' : 'light';
+        var next = (cur === 'dark') ? 'light' : 'dark';
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        applyTheme(next);
+      });
+
+      // Initialise from the attributes the pre-paint script already set.
+      applyLang(root.getAttribute('lang') === 'sv' ? 'sv' : 'en');
+      applyTheme(root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light');
+      document.getElementById('yr').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
